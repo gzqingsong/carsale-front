@@ -108,7 +108,7 @@ export const asyncRouterMap = [
       {
         path: 'message',
         component: () => import('@/views/customer/message'),
-        name: 'customerMessage',
+        name: 'numberVerify',
         meta: {
           title: '编号验章',
           roles: ['admin']
@@ -117,7 +117,7 @@ export const asyncRouterMap = [
       {
         path: 'message',
         component: () => import('@/views/customer/message'),
-        name: 'customerMessage',
+        name: 'PDFVerify',
         meta: {
           title: 'PDF验章',
           roles: ['admin']
@@ -145,7 +145,9 @@ export const asyncRouterMap = [
   {
     path: '/histList',
     component: Layout,
-    meta: { roles: ['admin'] },
+    meta: {
+      roles: ['admin']
+    },
     children: [
       {
         path: 'message',
@@ -168,8 +170,8 @@ export const asyncRouterMap = [
       roles: ['useradmin'] },
     children: [
       {
-        path: 'message',
-        name: 'message',
+        path: 'inputName',
+        name: 'inputName',
         component: () => import('@/views/about/message'),
         meta: {
           title: '名单录入',
@@ -178,8 +180,8 @@ export const asyncRouterMap = [
         }
       },
       {
-        path: 'message',
-        name: 'message',
+        path: 'inputSeal',
+        name: 'inputSeal',
         component: () => import('@/views/about/message'),
         meta: {
           title: '电子印章录入',

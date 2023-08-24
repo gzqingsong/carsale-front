@@ -52,6 +52,8 @@ const user = {
         state.roles = ['editor']
       } else if (roles === '0') {
         state.roles = ['admin']
+      } else if (roles === '2') {
+        state.roles = ['useradmin']
       }
     }
   },
