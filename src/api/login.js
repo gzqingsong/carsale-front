@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function loginByUsername(employeeId, password) {
   return request({
-    url: '/user/login',
+    url: '/seal-login-service/seal/user/login',
     method: 'post',
     params: { employeeId, password }
   })
@@ -10,14 +10,14 @@ export function loginByUsername(employeeId, password) {
 
 export function logout() {
   return request({
-    url: '/user/logout',
+    url: 'seal-login-service/seal/user/login',
     method: 'get'
   })
 }
 
 export function getUserInfo(token) {
   return request({
-    url: '/user/info',
+    url: 'seal-login-service/seal/user/login',
     method: 'post',
     params: { token }
   })
