@@ -94,24 +94,6 @@
         </el-form-item>
       </el-form>
     </el-dialog>
-
-    <el-dialog :visible.sync="dialogPassVisible" title="修改密码">
-      <el-form ref="ruleForm" :rules="rules" :model="ruleForm" label-position="left" label-width="100px" style="width: 400px; margin-left:50px;">
-        <el-form-item label="旧密码" prop="oldPass">
-          <el-input v-model="ruleForm.oldPass" type="password" auto-complete="off"/>
-        </el-form-item>
-        <el-form-item label="新密码" prop="newPass">
-          <el-input v-model="ruleForm.newPass" type="password" auto-complete="off"/>
-        </el-form-item>
-        <el-form-item label="确认密码" prop="checkPass">
-          <el-input v-model="ruleForm.checkPass" type="password" auto-complete="off"/>
-        </el-form-item>
-        <el-form-item>
-          <el-button @click="dialogPassVisible = false">取 消</el-button>
-          <el-button type="primary" @click="updatePass">确 认</el-button>
-        </el-form-item>
-      </el-form>
-    </el-dialog>
   </div>
 </template>
 

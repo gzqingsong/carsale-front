@@ -133,7 +133,7 @@ export const asyncRouterMap = [
       {
         path: 'message',
         name: 'message',
-        component: () => import('@/views/about/message'),
+        component: () => import('@/views/about/historyList'),
         meta: {
           title: '历史记录',
           icon: 'myEmp',

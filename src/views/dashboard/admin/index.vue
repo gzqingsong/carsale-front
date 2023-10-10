@@ -1,33 +1,13 @@
 <template>
-  <div class="dashboard-editor-container">
-
-    <!-- <github-corner style="position: absolute; top: 0px; border: 0; right: 0;"/> -->
-
-    <el-row :gutter="32" style="height: calc(100vh - 150px);width: 100%;">
-      <el-col :xs="24" :sm="24" :lg="18" style="height: 100%">
-        <pie-chart :option="option" height="100%" width="100%" class="chart-wrapper"/>
-      </el-col>
-      <el-col :xs="24" :sm="24" :lg="6">
-        <panel-group :sales="sales" :num="num"/>
-      </el-col>
-
-    </el-row>
-
-  </div>
+  <div/>
 </template>
 
 <script>
-// import GithubCorner from '@/components/GithubCorner'
-import PanelGroup from './components/PanelGroup'
-import PieChart from './components/PieChart'
 import { fetchIndexChart, fetchSaleNum } from '@/api/chart'
 
 export default {
   name: 'DashboardAdmin',
   components: {
-    // GithubCorner,
-    PanelGroup,
-    PieChart
   },
   data() {
     return {
@@ -44,8 +24,6 @@ export default {
     }
   },
   created() {
-    this.getChart()
-    this.getSaleNum()
   },
   methods: {
     getChart() {
